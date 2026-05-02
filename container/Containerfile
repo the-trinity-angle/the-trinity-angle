@@ -1,0 +1,9 @@
+FROM docker.io/library/node:22-slim
+
+ENV NODE_ENV=development
+
+WORKDIR /site/docs
+
+EXPOSE 4321
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
